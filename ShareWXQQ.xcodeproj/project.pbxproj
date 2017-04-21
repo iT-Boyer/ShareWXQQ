@@ -14,6 +14,8 @@
 		1472A68A1EA9C038008FB751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1472A6891EA9C038008FB751 /* Assets.xcassets */; };
 		1472A68D1EA9C038008FB751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1472A68B1EA9C038008FB751 /* LaunchScreen.storyboard */; };
 		1472A6981EA9C038008FB751 /* ShareWXQQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472A6971EA9C038008FB751 /* ShareWXQQTests.m */; };
+		996082F1D02E750EBCBE182F /* libPods-ShareWXQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042F982C5A82FCBFCFE978BC /* libPods-ShareWXQQ.a */; };
+		F82A49987C73DD3FB0D39670 /* libPods-ShareWXQQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3DBBDE5AC7E203B09AD5D5 /* libPods-ShareWXQQTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042F982C5A82FCBFCFE978BC /* libPods-ShareWXQQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareWXQQ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1472A67A1EA9C038008FB751 /* ShareWXQQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareWXQQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1472A67E1EA9C038008FB751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1472A6801EA9C038008FB751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		1472A6931EA9C038008FB751 /* ShareWXQQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareWXQQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1472A6971EA9C038008FB751 /* ShareWXQQTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareWXQQTests.m; sourceTree = "<group>"; };
 		1472A6991EA9C038008FB751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.release.xcconfig"; sourceTree = "<group>"; };
+		A2340485C0BEDD75217925CC /* Pods-ShareWXQQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests.release.xcconfig"; sourceTree = "<group>"; };
+		BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.debug.xcconfig"; sourceTree = "<group>"; };
+		DB3DBBDE5AC7E203B09AD5D5 /* libPods-ShareWXQQTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareWXQQTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4EDCA4930CB460E8977555 /* Pods-ShareWXQQTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996082F1D02E750EBCBE182F /* libPods-ShareWXQQ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82A49987C73DD3FB0D39670 /* libPods-ShareWXQQTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C99498FAF76F8A01FB907EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */,
+				68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */,
+				ED4EDCA4930CB460E8977555 /* Pods-ShareWXQQTests.debug.xcconfig */,
+				A2340485C0BEDD75217925CC /* Pods-ShareWXQQTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1472A6711EA9C038008FB751 = {
 			isa = PBXGroup;
 			children = (
 				1472A67C1EA9C038008FB751 /* ShareWXQQ */,
 				1472A6961EA9C038008FB751 /* ShareWXQQTests */,
 				1472A67B1EA9C038008FB751 /* Products */,
+				0C99498FAF76F8A01FB907EC /* Pods */,
+				C6A3609AA77832CC4F6D4EF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +134,15 @@
 			path = ShareWXQQTests;
 			sourceTree = "<group>";
 		};
+		C6A3609AA77832CC4F6D4EF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				042F982C5A82FCBFCFE978BC /* libPods-ShareWXQQ.a */,
+				DB3DBBDE5AC7E203B09AD5D5 /* libPods-ShareWXQQTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1472A69C1EA9C038008FB751 /* Build configuration list for PBXNativeTarget "ShareWXQQ" */;
 			buildPhases = (
+				DCF7E54D7EC9E114302E0AF1 /* [CP] Check Pods Manifest.lock */,
 				1472A6761EA9C038008FB751 /* Sources */,
 				1472A6771EA9C038008FB751 /* Frameworks */,
 				1472A6781EA9C038008FB751 /* Resources */,
+				62FBFB2F677B0C1FE1569C58 /* [CP] Embed Pods Frameworks */,
+				7CF392F295489DC9EC7E1C1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1472A69F1EA9C038008FB751 /* Build configuration list for PBXNativeTarget "ShareWXQQTests" */;
 			buildPhases = (
+				8EC61686B5BA267AC76DC58A /* [CP] Check Pods Manifest.lock */,
 				1472A68F1EA9C038008FB751 /* Sources */,
 				1472A6901EA9C038008FB751 /* Frameworks */,
 				1472A6911EA9C038008FB751 /* Resources */,
+				55F83FB15E83444D2BAE9A91 /* [CP] Embed Pods Frameworks */,
+				D7CB80D34196AF348A0BB8A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +247,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55F83FB15E83444D2BAE9A91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62FBFB2F677B0C1FE1569C58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CF392F295489DC9EC7E1C1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC61686B5BA267AC76DC58A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CB80D34196AF348A0BB8A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCF7E54D7EC9E114302E0AF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1472A6761EA9C038008FB751 /* Sources */ = {
@@ -351,6 +482,7 @@
 		};
 		1472A69D1EA9C038008FB751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
@@ -363,6 +495,7 @@
 		};
 		1472A69E1EA9C038008FB751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
@@ -375,6 +508,7 @@
 		};
 		1472A6A01EA9C038008FB751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED4EDCA4930CB460E8977555 /* Pods-ShareWXQQTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FA78T6VRG8;
@@ -388,6 +522,7 @@
 		};
 		1472A6A11EA9C038008FB751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2340485C0BEDD75217925CC /* Pods-ShareWXQQTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FA78T6VRG8;
