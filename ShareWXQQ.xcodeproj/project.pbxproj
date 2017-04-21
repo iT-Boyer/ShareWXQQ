@@ -14,6 +14,9 @@
 		1472A68A1EA9C038008FB751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1472A6891EA9C038008FB751 /* Assets.xcassets */; };
 		1472A68D1EA9C038008FB751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1472A68B1EA9C038008FB751 /* LaunchScreen.storyboard */; };
 		1472A6981EA9C038008FB751 /* ShareWXQQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472A6971EA9C038008FB751 /* ShareWXQQTests.m */; };
+		1472A6A51EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472A6A41EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
+		1472A6AC1EA9D53D008FB751 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472A6AB1EA9D53D008FB751 /* WXApiRequestHandler.m */; };
+		1472A6AE1EA9DAC9008FB751 /* res5thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 1472A6AD1EA9DAC9008FB751 /* res5thumb.png */; };
 		996082F1D02E750EBCBE182F /* libPods-ShareWXQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042F982C5A82FCBFCFE978BC /* libPods-ShareWXQQ.a */; };
 		F82A49987C73DD3FB0D39670 /* libPods-ShareWXQQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3DBBDE5AC7E203B09AD5D5 /* libPods-ShareWXQQTests.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +46,11 @@
 		1472A6931EA9C038008FB751 /* ShareWXQQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareWXQQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1472A6971EA9C038008FB751 /* ShareWXQQTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareWXQQTests.m; sourceTree = "<group>"; };
 		1472A6991EA9C038008FB751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1472A6A31EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; path = "Helper/SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		1472A6A41EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; path = "Helper/SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		1472A6AA1EA9D53D008FB751 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiRequestHandler.h; path = Control/WXApiRequestHandler.h; sourceTree = "<group>"; };
+		1472A6AB1EA9D53D008FB751 /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXApiRequestHandler.m; path = Control/WXApiRequestHandler.m; sourceTree = "<group>"; };
+		1472A6AD1EA9DAC9008FB751 /* res5thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = res5thumb.png; path = Assets.xcassets/res.imageset/res5thumb.png; sourceTree = "<group>"; };
 		68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.release.xcconfig"; sourceTree = "<group>"; };
 		A2340485C0BEDD75217925CC /* Pods-ShareWXQQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		1472A67C1EA9C038008FB751 /* ShareWXQQ */ = {
 			isa = PBXGroup;
 			children = (
+				1472A6A61EA9D291008FB751 /* Control */,
+				1472A6A21EA9D01F008FB751 /* Helper */,
 				1472A6801EA9C038008FB751 /* AppDelegate.h */,
 				1472A6811EA9C038008FB751 /* AppDelegate.m */,
 				1472A6831EA9C038008FB751 /* ViewController.h */,
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1472A67E1EA9C038008FB751 /* main.m */,
+				1472A6AD1EA9DAC9008FB751 /* res5thumb.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,6 +143,24 @@
 				1472A6991EA9C038008FB751 /* Info.plist */,
 			);
 			path = ShareWXQQTests;
+			sourceTree = "<group>";
+		};
+		1472A6A21EA9D01F008FB751 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1472A6A31EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */,
+				1472A6A41EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		1472A6A61EA9D291008FB751 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				1472A6AA1EA9D53D008FB751 /* WXApiRequestHandler.h */,
+				1472A6AB1EA9D53D008FB751 /* WXApiRequestHandler.m */,
+			);
+			name = Control;
 			sourceTree = "<group>";
 		};
 		C6A3609AA77832CC4F6D4EF4 /* Frameworks */ = {
@@ -236,6 +265,7 @@
 				1472A68D1EA9C038008FB751 /* LaunchScreen.storyboard in Resources */,
 				1472A68A1EA9C038008FB751 /* Assets.xcassets in Resources */,
 				1472A6881EA9C038008FB751 /* Main.storyboard in Resources */,
+				1472A6AE1EA9DAC9008FB751 /* res5thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1472A6851EA9C038008FB751 /* ViewController.m in Sources */,
+				1472A6AC1EA9D53D008FB751 /* WXApiRequestHandler.m in Sources */,
+				1472A6A51EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				1472A6821EA9C038008FB751 /* AppDelegate.m in Sources */,
 				1472A67F1EA9C038008FB751 /* main.m in Sources */,
 			);
@@ -487,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = ShareWXQQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.ShareWXQQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				INFOPLIST_FILE = ShareWXQQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.ShareWXQQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,6 +587,7 @@
 				1472A69E1EA9C038008FB751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1472A69F1EA9C038008FB751 /* Build configuration list for PBXNativeTarget "ShareWXQQTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +596,7 @@
 				1472A6A11EA9C038008FB751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
