@@ -28,11 +28,20 @@
                                     <action selector="shareSDK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k1R-v1-FCc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzf-Rt-HZq">
+                                <rect key="frame" x="153" y="250" width="69" height="30"/>
+                                <state key="normal" title="分享到QQ"/>
+                                <connections>
+                                    <action selector="shareQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2q-uY-OOF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Q0-61-55c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4yr-55-8Nv"/>
                             <constraint firstItem="5Q0-61-55c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Afc-E0-Rbd"/>
+                            <constraint firstItem="qzf-Rt-HZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hrc-26-vsH"/>
+                            <constraint firstItem="5Q0-61-55c" firstAttribute="top" secondItem="qzf-Rt-HZq" secondAttribute="bottom" constant="39" id="fcl-wg-0j4"/>
                         </constraints>
                     </view>
                 </viewController>

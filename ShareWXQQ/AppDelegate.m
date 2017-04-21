@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [WXApi registerApp:@"wx49b46f184e65e4de" enableMTA:YES];
+    [[TencentOAuth alloc] initWithAppId:@"100569483" andDelegate:self];
     return YES;
 }
 
@@ -45,14 +46,19 @@
 #pragma mark - weixin 
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
+    //qq回调
+    [TencentOAuth HandleOpenURL:url];
     
     return [WXApi handleOpenURL:url delegate:self];
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    //qq回调
+    [TencentOAuth HandleOpenURL:url];
     
     return [WXApi handleOpenURL:url delegate:self];
+    
 }
 
 ///onReq是微信终端向第三方程序发起请求，要求第三方程序响应。第三方程序响应完后必须调用sendRsp返回。在调用sendRsp返回时，会切回到微信终端程序界面。

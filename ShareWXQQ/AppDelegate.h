@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <WXApi.h>
-@interface AppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate>
+#import <TencentOpenAPI/TencentOAuth.h>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate,TencentSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
