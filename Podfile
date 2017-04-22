@@ -15,9 +15,9 @@ end
 
 
 target 'ShareSDKDemo' do
-    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+    pod 'ShareSDK3/ShareSDKPlatforms/QQ', '~> 3.6.2.1'
     # pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
-    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
-
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat', '~> 3.6.2.1'
+    pod 'ShareSDK3/ShareSDKUI', '~> 3.6.2.1'
 end
     

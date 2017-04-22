@@ -36,6 +36,9 @@
 		84DD9E6D1EAACE200067CD03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DD9E6C1EAACE200067CD03 /* Assets.xcassets */; };
 		84DD9E701EAACE200067CD03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD9E6E1EAACE200067CD03 /* LaunchScreen.storyboard */; };
 		84DD9E7B1EAACE210067CD03 /* ShareSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E7A1EAACE210067CD03 /* ShareSDKDemoTests.m */; };
+		84DD9E881EAB2DB90067CD03 /* MOBQQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E851EAB2DB90067CD03 /* MOBQQViewController.m */; };
+		84DD9E891EAB2DB90067CD03 /* MOBWechatcontactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E871EAB2DB90067CD03 /* MOBWechatcontactsViewController.m */; };
+		84DD9E8C1EAB2E380067CD03 /* MOBPlatformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E8B1EAB2E380067CD03 /* MOBPlatformViewController.m */; };
 		996082F1D02E750EBCBE182F /* libPods-ShareWXQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042F982C5A82FCBFCFE978BC /* libPods-ShareWXQQ.a */; };
 		F82A49987C73DD3FB0D39670 /* libPods-ShareWXQQTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3DBBDE5AC7E203B09AD5D5 /* libPods-ShareWXQQTests.a */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,16 @@
 		84DD9E7A1EAACE210067CD03 /* ShareSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareSDKDemoTests.m; sourceTree = "<group>"; };
 		84DD9E7C1EAACE210067CD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DD9E831EAAE71A0067CD03 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84DD9E841EAB2DB90067CD03 /* MOBQQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBQQViewController.h; sourceTree = "<group>"; };
+		84DD9E851EAB2DB90067CD03 /* MOBQQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBQQViewController.m; sourceTree = "<group>"; };
+		84DD9E861EAB2DB90067CD03 /* MOBWechatcontactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBWechatcontactsViewController.h; sourceTree = "<group>"; };
+		84DD9E871EAB2DB90067CD03 /* MOBWechatcontactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBWechatcontactsViewController.m; sourceTree = "<group>"; };
+		84DD9E8A1EAB2E380067CD03 /* MOBPlatformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBPlatformViewController.h; sourceTree = "<group>"; };
+		84DD9E8B1EAB2E380067CD03 /* MOBPlatformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBPlatformViewController.m; sourceTree = "<group>"; };
+		84DD9E8D1EAB9B0E0067CD03 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		84DD9E8F1EAB9B380067CD03 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		84DD9E931EAB9B640067CD03 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		84DD9E951EABA47E0067CD03 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		A2340485C0BEDD75217925CC /* Pods-ShareWXQQTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQTests/Pods-ShareWXQQTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2A8E3404AFC6CC151020207 /* Pods-ShareSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareSDKDemo/Pods-ShareSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +271,12 @@
 				84DD9E641EAACE200067CD03 /* AppDelegate.m */,
 				84DD9E661EAACE200067CD03 /* ViewController.h */,
 				84DD9E671EAACE200067CD03 /* ViewController.m */,
+				84DD9E8A1EAB2E380067CD03 /* MOBPlatformViewController.h */,
+				84DD9E8B1EAB2E380067CD03 /* MOBPlatformViewController.m */,
+				84DD9E841EAB2DB90067CD03 /* MOBQQViewController.h */,
+				84DD9E851EAB2DB90067CD03 /* MOBQQViewController.m */,
+				84DD9E861EAB2DB90067CD03 /* MOBWechatcontactsViewController.h */,
+				84DD9E871EAB2DB90067CD03 /* MOBWechatcontactsViewController.m */,
 				84DD9E691EAACE200067CD03 /* Main.storyboard */,
 				84DD9E6C1EAACE200067CD03 /* Assets.xcassets */,
 				84DD9E6E1EAACE200067CD03 /* LaunchScreen.storyboard */,
@@ -287,6 +306,10 @@
 		C6A3609AA77832CC4F6D4EF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84DD9E951EABA47E0067CD03 /* libc++abi.tbd */,
+				84DD9E931EAB9B640067CD03 /* JavaScriptCore.framework */,
+				84DD9E8F1EAB9B380067CD03 /* libicucore.tbd */,
+				84DD9E8D1EAB9B0E0067CD03 /* libsqlite3.0.tbd */,
 				1472A6C61EA9E71A008FB751 /* TencentOpenApi_IOS_Bundle.bundle */,
 				1472A6C41EA9E6B4008FB751 /* libz.1.2.8.tbd */,
 				1472A6C21EA9E6A1008FB751 /* libstdc++.6.0.9.tbd */,
@@ -642,9 +665,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DD9E891EAB2DB90067CD03 /* MOBWechatcontactsViewController.m in Sources */,
 				84DD9E681EAACE200067CD03 /* ViewController.m in Sources */,
+				84DD9E8C1EAB2E380067CD03 /* MOBPlatformViewController.m in Sources */,
 				84DD9E651EAACE200067CD03 /* AppDelegate.m in Sources */,
 				84DD9E621EAACE200067CD03 /* main.m in Sources */,
+				84DD9E881EAB2DB90067CD03 /* MOBQQViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,7 +933,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				DEVELOPMENT_TEAM = 2C4H9T5RF5;
 				INFOPLIST_FILE = ShareSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Layer.Animations.ShareSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -922,7 +948,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				DEVELOPMENT_TEAM = 2C4H9T5RF5;
 				INFOPLIST_FILE = ShareSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Layer.Animations.ShareSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

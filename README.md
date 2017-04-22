@@ -9,3 +9,8 @@
 #import <WechatOpenSDK/WXApi.h>
 ```
 其他相关API引入，也要保证引入的是全路径。
+
+### URL scheme
+
+
+### 制定APP打开文件类型
