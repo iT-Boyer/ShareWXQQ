@@ -11,6 +11,7 @@
 其他相关API引入，也要保证引入的是全路径。
 
 ### URL scheme
-
+LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法
 
 ### 制定APP打开文件类型
+Uniform type identifiers(UTIs)提供了在整个系统里面标识数据的一个统一的方式，比如documents(文档)、pasteboard data(剪贴板数据)和bundles(包)。
