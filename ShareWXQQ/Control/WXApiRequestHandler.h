@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "SendMessageToWXReq+requestWithTextOrMediaMessage.h"
 @interface WXApiRequestHandler : NSObject
 

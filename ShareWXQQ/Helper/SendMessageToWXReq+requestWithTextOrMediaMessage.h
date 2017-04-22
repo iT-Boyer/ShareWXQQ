@@ -6,7 +6,7 @@
 //  Copyright © 2017 PBBReader. All rights reserved.
 //
 
-#import "WXApiObject.h"
+#import <WechatOpenSDK/WXApiObject.h>
 
 /// 扩展增加便利方法
 @interface SendMessageToWXReq (requestWithTextOrMediaMessage)

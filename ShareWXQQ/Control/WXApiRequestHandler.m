@@ -7,7 +7,7 @@
 //
 
 #import "WXApiRequestHandler.h"
-#import <WXApi.h>
+#import <WechatOpenSDK/WXApi.h>
 
 @implementation WXApiRequestHandler
 

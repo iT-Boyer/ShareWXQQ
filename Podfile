@@ -11,5 +11,13 @@ target 'ShareWXQQ' do
     inherit! :search_paths
     # Pods for testing
   end
+end
+
+
+target 'ShareSDKDemo' do
+    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+    # pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
 
 end
+    
