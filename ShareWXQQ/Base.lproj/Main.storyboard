@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,6 +28,13 @@
                                     <action selector="shareSDK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k1R-v1-FCc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-5a-Pvr">
+                                <rect key="frame" x="152" y="372" width="71" height="30"/>
+                                <state key="normal" title="Document"/>
+                                <connections>
+                                    <action selector="shareByDocumentAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0v-NZ-Ch8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzf-Rt-HZq">
                                 <rect key="frame" x="153" y="250" width="69" height="30"/>
                                 <state key="normal" title="分享到QQ"/>
@@ -35,13 +42,24 @@
                                     <action selector="shareQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2q-uY-OOF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-M6-Ahj">
+                                <rect key="frame" x="151" y="424" width="73" height="30"/>
+                                <state key="normal" title="QuickLook"/>
+                                <connections>
+                                    <action selector="QuickLook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUp-He-rJJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Q0-61-55c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4yr-55-8Nv"/>
+                            <constraint firstItem="h0h-M6-Ahj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5yI-Sg-0Yp"/>
+                            <constraint firstItem="wab-5a-Pvr" firstAttribute="top" secondItem="5Q0-61-55c" secondAttribute="bottom" constant="23" id="5yu-It-UGa"/>
                             <constraint firstItem="5Q0-61-55c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Afc-E0-Rbd"/>
+                            <constraint firstItem="wab-5a-Pvr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ds2-j8-hfI"/>
                             <constraint firstItem="qzf-Rt-HZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hrc-26-vsH"/>
                             <constraint firstItem="5Q0-61-55c" firstAttribute="top" secondItem="qzf-Rt-HZq" secondAttribute="bottom" constant="39" id="fcl-wg-0j4"/>
+                            <constraint firstItem="h0h-M6-Ahj" firstAttribute="top" secondItem="wab-5a-Pvr" secondAttribute="bottom" constant="22" id="rqc-Pf-hdX"/>
                         </constraints>
                     </view>
                 </viewController>

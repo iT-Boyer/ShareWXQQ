@@ -48,6 +48,7 @@
 		<string>mqq</string>
 		<string>weixin</string>
 		<string>mqqapi</string>
+		<string>mqqopensdkapiV2</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

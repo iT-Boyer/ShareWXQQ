@@ -226,7 +226,7 @@
                                              thumbImage:[[NSBundle mainBundle] pathForResource:@"COD13" ofType:@"jpg"]
                                                   image:nil
                                            musicFileURL:nil
-                                                extInfo:nil
+                                                extInfo:@"ddddddddd"
                                                fileData:nil
                                            emoticonData:nil
                                     sourceFileExtension:@"mp4"
