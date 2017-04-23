@@ -9,11 +9,13 @@
 #import <WechatOpenSDK/WXApi.h>
 ```
 其他相关API引入，也要保证引入的是全路径。
-/Users/admin/Desktop/屏幕快照 2017-04-23 上午8.34.42.png
+
 ### URL scheme
 LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法
+
 QQ包含三个：
-![](/Schemes.png)
+
+![](ShareWXQQ/Schemes.png)
 
 微信端无需配置。
 
@@ -21,9 +23,12 @@ QQ包含三个：
 Uniform type identifiers(UTIs)提供了在整个系统里面标识数据的一个统一的方式，比如documents(文档)、pasteboard data(剪贴板数据)和bundles(包)。
 
 ### 真机调试免费App ID出现的问题
-The maximum number of apps for free development profiles has been reached.
+`The maximum number of apps for free development profiles has been reached.`
+
 免费应用程序调试最大限度
+
 苹果免费App ID只能运行2个应用程序,当调试第三个的时候就会报这个错误,必须把之前的应用程序删除,才能调试新。
+
 [解决方案](http://www.jianshu.com/p/99c441070b22)
 
 ### 微信SDK 官方文件接口描述
