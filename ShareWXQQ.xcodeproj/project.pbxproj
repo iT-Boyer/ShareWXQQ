@@ -28,6 +28,8 @@
 		1472A6C51EA9E6B4008FB751 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1472A6C41EA9E6B4008FB751 /* libz.1.2.8.tbd */; };
 		1472A6C71EA9E71A008FB751 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1472A6C61EA9E71A008FB751 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		1472A6CA1EA9ED1F008FB751 /* QQApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1472A6C91EA9ED1F008FB751 /* QQApiRequestHandler.m */; };
+		14E4E30C1EADA244006E2928 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E4E30B1EADA244006E2928 /* WXApiManager.m */; };
+		14E4E30F1EADA361006E2928 /* UIAlertView+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E4E30E1EADA361006E2928 /* UIAlertView+WX.m */; };
 		73710853666FF89CB2001B11 /* libPods-ShareSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 313476798BFE37835996000C /* libPods-ShareSDKDemo.a */; };
 		84DD9E621EAACE200067CD03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E611EAACE200067CD03 /* main.m */; };
 		84DD9E651EAACE200067CD03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD9E641EAACE200067CD03 /* AppDelegate.m */; };
@@ -95,6 +97,10 @@
 		1472A6C61EA9E71A008FB751 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = ShareWXQQ/SDK/QQV3.2/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		1472A6C81EA9ED1F008FB751 /* QQApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QQApiRequestHandler.h; path = Control/QQApiRequestHandler.h; sourceTree = "<group>"; };
 		1472A6C91EA9ED1F008FB751 /* QQApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QQApiRequestHandler.m; path = Control/QQApiRequestHandler.m; sourceTree = "<group>"; };
+		14E4E30A1EADA244006E2928 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		14E4E30B1EADA244006E2928 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		14E4E30D1EADA361006E2928 /* UIAlertView+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+WX.h"; sourceTree = "<group>"; };
+		14E4E30E1EADA361006E2928 /* UIAlertView+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+WX.m"; sourceTree = "<group>"; };
 		313476798BFE37835996000C /* libPods-ShareSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareWXQQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareWXQQ/Pods-ShareWXQQ.release.xcconfig"; sourceTree = "<group>"; };
 		84DD9E5E1EAACE1F0067CD03 /* ShareSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +260,8 @@
 		1472A6A21EA9D01F008FB751 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				14E4E30D1EADA361006E2928 /* UIAlertView+WX.h */,
+				14E4E30E1EADA361006E2928 /* UIAlertView+WX.m */,
 				1472A6A31EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */,
 				1472A6A41EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
 			);
@@ -267,6 +275,8 @@
 				1472A6AB1EA9D53D008FB751 /* WXApiRequestHandler.m */,
 				1472A6C81EA9ED1F008FB751 /* QQApiRequestHandler.h */,
 				1472A6C91EA9ED1F008FB751 /* QQApiRequestHandler.m */,
+				14E4E30A1EADA244006E2928 /* WXApiManager.h */,
+				14E4E30B1EADA244006E2928 /* WXApiManager.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -656,11 +666,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E4E30C1EADA244006E2928 /* WXApiManager.m in Sources */,
 				1472A6851EA9C038008FB751 /* ViewController.m in Sources */,
 				1472A6CA1EA9ED1F008FB751 /* QQApiRequestHandler.m in Sources */,
 				1472A6AC1EA9D53D008FB751 /* WXApiRequestHandler.m in Sources */,
 				1472A6A51EA9D079008FB751 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				1472A6821EA9C038008FB751 /* AppDelegate.m in Sources */,
+				14E4E30F1EADA361006E2928 /* UIAlertView+WX.m in Sources */,
 				1472A67F1EA9C038008FB751 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

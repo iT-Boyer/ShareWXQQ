@@ -31,50 +31,6 @@ Uniform type identifiers(UTIs)提供了在整个系统里面标识数据的一�
 
 [解决方案](http://www.jianshu.com/p/99c441070b22)
 
-### 微信SDK 官方文件接口描述
-不支持描述信息，logo图标的设置：
-```objc
-#pragma mark - WXFileObject
-/*! @brief 多媒体消息中包含的文件数据对象
-*
-* @see WXMediaMessage
-*/
-@interface WXFileObject : NSObject
-
-/*! @brief 返回一个WXFileObject对象
-*
-* @note 返回的WXFileObject对象是自动释放的
-*/
-+(WXFileObject *) object;
-
-/** 文件后缀名
-* @note 长度不超过64字节
-*/
-@property (nonatomic, retain) NSString  *fileExtension;
-
-/** 文件真实数据内容
-* @note 大小不能超过10M
-*/
-@property (nonatomic, retain) NSData    *fileData;
-```
-@end
-
-### QQSDK 分享文件API
-暂时不支持普通方式的文件分享
-```objc
-//QQApiFileObject
-/** @brief 本地文件对象(暂只支持分享到手机QQ数据线功能)
-用于分享文件内容的对象，是一个指定为文件类型的<code>QQApiExtendObject</code>
-*/
-@interface QQApiFileObject : QQApiExtendObject
-{
-NSString* _fileName;
-}
-@property(nonatomic, retain)NSString* fileName;
-@end
-```
-
-
 ### 系统提供的分享方式
 
 1. UIDocumentInteractionController方式
@@ -100,7 +56,7 @@ navRect.origin = CGPointMake(navRect.origin.x - 40, navRect.origin.y + 20);
 }
 ```
 ### quicklook 支持同时浏览多个文件
-```
+```objc
 #pragma mark - QuickLook
 -(IBAction)QuickLook:(id)sender
 {
@@ -133,3 +89,49 @@ return preFileURLs.count;
 return preFileURLs[index];
 }
 ```
+
+### 微信SDK 官方文件接口描述
+不支持描述信息，logo图标的设置：
+```objc
+#pragma mark - WXFileObject
+/*! @brief 多媒体消息中包含的文件数据对象
+*
+* @see WXMediaMessage
+*/
+@interface WXFileObject : NSObject
+
+/*! @brief 返回一个WXFileObject对象
+*
+* @note 返回的WXFileObject对象是自动释放的
+*/
++(WXFileObject *) object;
+
+/** 文件后缀名
+* @note 长度不超过64字节
+*/
+@property (nonatomic, retain) NSString  *fileExtension;
+
+/** 文件真实数据内容
+* @note 大小不能超过10M
+*/
+@property (nonatomic, retain) NSData    *fileData;
+
+@end
+```
+
+### QQSDK 分享文件API
+暂时不支持普通方式的文件分享
+```objc
+//QQApiFileObject
+/** @brief 本地文件对象(暂只支持分享到手机QQ数据线功能)
+用于分享文件内容的对象，是一个指定为文件类型的<code>QQApiExtendObject</code>
+*/
+@interface QQApiFileObject : QQApiExtendObject
+{
+NSString* _fileName;
+}
+@property(nonatomic, retain)NSString* fileName;
+@end
+```
+总结：对于QQAPI不支持分享文件，相应只能使用原有的Document系统接口来实现，这样就无法得知时候分享成功进行统计。
+对于WXAPI支持分享文件，但不支持自定义文件图标，

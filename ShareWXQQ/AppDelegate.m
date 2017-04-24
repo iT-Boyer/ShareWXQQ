@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [WXApi registerApp:@"wx49b46f184e65e4de" enableMTA:YES];
+    [WXApi registerApp:@"wxd930ea5d5a258f4f" enableMTA:YES];
     //[WXApi registerApp:@"wx49b46f184e65e4de"];
     [[TencentOAuth alloc] initWithAppId:@"100569483" andDelegate:self];
     return YES;
@@ -53,7 +53,10 @@
     return [WXApi handleOpenURL:url delegate:self];
 }
 
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
 {
     //qq回调
     [TencentOAuth HandleOpenURL:url];
