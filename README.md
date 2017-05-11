@@ -144,6 +144,7 @@ NSString* _fileName;
 
 Document的使用：    
 1. Document types配置APP能够打开的文件类型    
+![](ShareSDKDemo/documentstype.png)   
 2. "使用其他应用打开..." ,选中APP图标，会调用 `application:openURL:sourceApplication:annotation:`  
 
 ### 第三方分享完成，返回APP时
