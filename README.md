@@ -135,3 +135,48 @@ NSString* _fileName;
 ```
 总结：对于QQAPI不支持分享文件，相应只能使用原有的Document系统接口来实现，这样就无法得知时候分享成功进行统计。
 对于WXAPI支持分享文件，但不支持自定义文件图标，
+## 配置回调代理的两个地方
+在iOS9及以上系统，则必须要实现以下方法，在其中配置第三方分享代理。
+
+### 第三方分享完成，返回APP时
+回调application:openURL:options: ，iOS9之后废弃了application:handleOpenURL:代理方法
+
+```objc
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+    // 配置weixin／QQ代理
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    if (weixin)
+    {
+        //微信回调处理
+    }
+    if(qq)
+    {
+        //qq回调处理
+    }
+    return weixin;
+}
+```
+
+### "使用其他应用打开..."启动APP
+调用：application:openURL:sourceApplication:annotation:
+
+在这里也可以配置微信/QQ分享代理
+```objc
+// 其他方式打开，选择后APP后调用
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
+{
+    //拷贝到APP中本地的文档路径 url.path :路径前缀有file:/// 或 file://localhost
+    NSLog(@"文档路径：%@",url.path);
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    return YES;
+}
+```
+
