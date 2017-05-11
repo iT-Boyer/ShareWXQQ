@@ -138,14 +138,15 @@ NSString* _fileName;
 ## 配置回调代理的两个地方
 在iOS9及以上系统，则必须要实现以下方法，在其中配置第三方分享代理。   
 
-第三方分享回调前提条件：  
+第三方分享(文本/文档)回调前提条件：    
 1. 需要按照第三方分享APP文档，来配置对应的URL scheme：在ios9之后改为LSApplicationQueriesSchemes来配置。  
-2. 在第一步基础上，微信分享完成时，才能成功回调系统方法:`application:openURL:options:`，进而配置第三方app回调代理。   
+2. 在第一步基础上，微信，qq等分享完成时，才能成功回调系统方法:`application:openURL:options:`，进而配置第三方app回调代理。   
 
-Document的使用：    
+使用Document文档共享：   
+直接通过`application:openURL:sourceApplication:annotation:`方法启动APP，在此方法里可以处理拷贝到本地的文档信息。     
 1. Document types配置APP能够打开的文件类型    
 ![](ShareSDKDemo/documentstype.png)   
-2. "使用其他应用打开..." ,选中APP图标，会调用 `application:openURL:sourceApplication:annotation:`  
+2. "使用其他应用打开..." ,选中APP图标，调用启动APP的方法。  
 
 ### 第三方分享完成，返回APP时
 回调application:openURL:options: ，iOS9之后废弃了application:handleOpenURL:代理方法
