@@ -6,7 +6,8 @@ target 'ShareWXQQ' do
   # use_frameworks!
 
   # Pods for ShareWXQQ
- pod 'WechatOpenSDK'
+  pod 'WechatOpenSDK'
+  
   target 'ShareWXQQTests' do
     inherit! :search_paths
     # Pods for testing

@@ -17,13 +17,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [WXApi registerApp:@"wx49b46f184e65e4de" enableMTA:YES];
+    [WXApi registerApp:@"wxd930ea5d5a258f4f" enableMTA:YES];
     //[WXApi registerApp:@"wx49b46f184e65e4de"];
     [[TencentOAuth alloc] initWithAppId:@"100569483" andDelegate:self];
     return YES;
 }
 
-
+    // 其他方式打开，选择后APP后调用
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
+{
+    NSLog(@"weixinweixinweixinweixin");
+    //qq回调
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    if (weixin) {
+        //
+        NSLog(@"weixinweixinweixinweixin");
+        return weixin;
+    }
+    
+    if (qq) {
+        //
+        NSLog(@"qqqqqqqqqqqq");
+        return qq;
+    }
+    return weixin;
+}
+    
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
 
@@ -44,23 +67,32 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 }
 
-#pragma mark - weixin 
--(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+#pragma mark - weixin  分享回调方法 ：iOS9之后废弃了application:handleOpenURL:代理方法
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
-    //qq回调
-    [TencentOAuth HandleOpenURL:url];
+    NSLog(@"weixinweixinweixinweixin");
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    if (weixin) {
+        //
+        NSLog(@"weixinweixinweixinweixin");
+    }
     
-    return [WXApi handleOpenURL:url delegate:self];
+    if (qq) {
+        //
+        NSLog(@"qqqqqqqqqqqq");
+    }
+    
+    
+    return YES;
 }
-
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    //qq回调
-    [TencentOAuth HandleOpenURL:url];
     
-    return [WXApi handleOpenURL:url delegate:self];
     
-}
+    
+    
+    
 
 ///onReq是微信终端向第三方程序发起请求，要求第三方程序响应。第三方程序响应完后必须调用sendRsp返回。在调用sendRsp返回时，会切回到微信终端程序界面。
 -(void)onReq:(BaseReq *)req

@@ -31,50 +31,6 @@ Uniform type identifiers(UTIs)提供了在整个系统里面标识数据的一�
 
 [解决方案](http://www.jianshu.com/p/99c441070b22)
 
-### 微信SDK 官方文件接口描述
-不支持描述信息，logo图标的设置：
-```objc
-#pragma mark - WXFileObject
-/*! @brief 多媒体消息中包含的文件数据对象
-*
-* @see WXMediaMessage
-*/
-@interface WXFileObject : NSObject
-
-/*! @brief 返回一个WXFileObject对象
-*
-* @note 返回的WXFileObject对象是自动释放的
-*/
-+(WXFileObject *) object;
-
-/** 文件后缀名
-* @note 长度不超过64字节
-*/
-@property (nonatomic, retain) NSString  *fileExtension;
-
-/** 文件真实数据内容
-* @note 大小不能超过10M
-*/
-@property (nonatomic, retain) NSData    *fileData;
-```
-@end
-
-### QQSDK 分享文件API
-暂时不支持普通方式的文件分享
-```objc
-//QQApiFileObject
-/** @brief 本地文件对象(暂只支持分享到手机QQ数据线功能)
-用于分享文件内容的对象，是一个指定为文件类型的<code>QQApiExtendObject</code>
-*/
-@interface QQApiFileObject : QQApiExtendObject
-{
-NSString* _fileName;
-}
-@property(nonatomic, retain)NSString* fileName;
-@end
-```
-
-
 ### 系统提供的分享方式
 
 1. UIDocumentInteractionController方式
@@ -100,7 +56,7 @@ navRect.origin = CGPointMake(navRect.origin.x - 40, navRect.origin.y + 20);
 }
 ```
 ### quicklook 支持同时浏览多个文件
-```
+```objc
 #pragma mark - QuickLook
 -(IBAction)QuickLook:(id)sender
 {
@@ -133,3 +89,104 @@ return preFileURLs.count;
 return preFileURLs[index];
 }
 ```
+
+### 微信SDK 官方文件接口描述
+不支持描述信息，logo图标的设置：
+```objc
+#pragma mark - WXFileObject
+/*! @brief 多媒体消息中包含的文件数据对象
+*
+* @see WXMediaMessage
+*/
+@interface WXFileObject : NSObject
+
+/*! @brief 返回一个WXFileObject对象
+*
+* @note 返回的WXFileObject对象是自动释放的
+*/
++(WXFileObject *) object;
+
+/** 文件后缀名
+* @note 长度不超过64字节
+*/
+@property (nonatomic, retain) NSString  *fileExtension;
+
+/** 文件真实数据内容
+* @note 大小不能超过10M
+*/
+@property (nonatomic, retain) NSData    *fileData;
+
+@end
+```
+
+### QQSDK 分享文件API
+暂时不支持普通方式的文件分享
+```objc
+//QQApiFileObject
+/** @brief 本地文件对象(暂只支持分享到手机QQ数据线功能)
+用于分享文件内容的对象，是一个指定为文件类型的<code>QQApiExtendObject</code>
+*/
+@interface QQApiFileObject : QQApiExtendObject
+{
+NSString* _fileName;
+}
+@property(nonatomic, retain)NSString* fileName;
+@end
+```
+总结：对于QQAPI不支持分享文件，相应只能使用原有的Document系统接口来实现，这样就无法得知时候分享成功进行统计。
+对于WXAPI支持分享文件，但不支持自定义文件图标，
+## 配置回调代理的两个地方
+在iOS9及以上系统，则必须要实现以下方法，在其中配置第三方分享代理。   
+
+第三方分享(文本/文档)回调前提条件：    
+1. 需要按照第三方分享APP文档，来配置对应的URL scheme：在ios9之后改为LSApplicationQueriesSchemes来配置。  
+2. 在第一步基础上，微信，qq等分享完成时，才能成功回调系统方法:`application:openURL:options:`，进而配置第三方app回调代理。   
+
+使用Document文档共享：   
+直接通过`application:openURL:sourceApplication:annotation:`方法启动APP，在此方法里可以处理拷贝到本地的文档信息。     
+1. Document types配置APP能够打开的文件类型    
+![](ShareSDKDemo/documentstype.png)   
+2. "使用其他应用打开..." ,选中APP图标，调用启动APP的方法。  
+
+### 第三方分享完成，返回APP时
+回调application:openURL:options: ，iOS9之后废弃了application:handleOpenURL:代理方法
+
+```objc
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+    // 配置weixin／QQ代理
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    if (weixin)
+    {
+        //微信回调处理
+    }
+    if(qq)
+    {
+        //qq回调处理
+    }
+    return weixin;
+}
+```
+
+### "使用其他应用打开..."启动APP
+调用：application:openURL:sourceApplication:annotation:
+
+在这里也可以配置微信/QQ分享代理
+```objc
+// 其他方式打开，选择后APP后调用
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
+{
+    //拷贝到APP中本地的文档路径 url.path :路径前缀有file:/// 或 file://localhost
+    NSLog(@"文档路径：%@",url.path);
+    BOOL weixin = [WXApi handleOpenURL:url delegate:self];
+    BOOL qq = [TencentOAuth HandleOpenURL:url];
+    return YES;
+}
+```
+
