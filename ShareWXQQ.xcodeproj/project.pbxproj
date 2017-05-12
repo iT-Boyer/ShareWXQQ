@@ -439,7 +439,7 @@
 				TargetAttributes = {
 					1472A6791EA9C038008FB751 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2C4H9T5RF5;
+						DevelopmentTeam = FA78T6VRG8;
 						ProvisioningStyle = Automatic;
 					};
 					1472A6921EA9C038008FB751 = {
@@ -852,7 +852,7 @@
 			baseConfigurationReference = BE2CA9C4C8B9BEB0DED50DDD /* Pods-ShareWXQQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareWXQQ/SDK/QQV3.2",
@@ -879,7 +879,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hsg.pyc.com.cn.ShareWXQQ;
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.pbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -889,7 +889,7 @@
 			baseConfigurationReference = 68E467DC0B4850CA604D86A1 /* Pods-ShareWXQQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareWXQQ/SDK/QQV3.2",
@@ -916,7 +916,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hsg.pyc.com.cn.ShareWXQQ;
+				PRODUCT_BUNDLE_IDENTIFIER = pyc.com.cn.pbb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

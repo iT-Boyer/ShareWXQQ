@@ -148,8 +148,18 @@ NSString* _fileName;
 ![](ShareSDKDemo/documentstype.png)   
 2. "使用其他应用打开..." ,选中APP图标，调用启动APP的方法。  
 
-### 第三方分享完成，返回APP时
-回调application:openURL:options: ，iOS9之后废弃了application:handleOpenURL:代理方法
+### 第三方分享完成，返回APP时／"使用其他应用打开..."启动APP
+
+iOS9之后从其他app回到自己app的时候回调的方法已经变更：
+```
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can't open for some reason
+```
+在iOS9及以上系统，只需要重写`application:openURL:options:方法即可。`
+如果要兼容iOS9以下系统则同时重写`application:openURL:sourceApplication:annotation:`
+
+回调`application:openURL:options:`的具体使用：
 
 ```objc
 - (BOOL)application:(UIApplication *)app
@@ -169,12 +179,38 @@ NSString* _fileName;
     }
     return weixin;
 }
+
+```
+1. 第三方API回调时打印相关参数：
+```
+(lldb) po url
+QQ05FE918B://response_from_qq?source=qq&source_scheme=mqqapi&error=0&version=1&sdkv=3.1
+
+(lldb) po options
+{
+    UIApplicationOpenURLOptionsOpenInPlaceKey = 0;
+    UIApplicationOpenURLOptionsSourceApplicationKey = "com.tencent.mqq";
+}
 ```
 
-### "使用其他应用打开..."启动APP
-调用：application:openURL:sourceApplication:annotation:
+2. "使用其他应用打开..."启动APP
+打印相关参数：
+```
+(lldb) po url
+file:///private/var/mobile/Containers/Data/Application/19635039-49D4-4120-A0AA-FB55908A5988/Documents/Inbox/Info.plist
 
-在这里也可以配置微信/QQ分享代理
+(lldb) po options
+{
+UIApplicationOpenURLOptionsAnnotationKey =     {
+};
+UIApplicationOpenURLOptionsOpenInPlaceKey = 0;
+UIApplicationOpenURLOptionsSourceApplicationKey = "com.tencent.mqq";
+}
+
+```
+
+### 兼容iOS9 以下系统
+配置微信/QQ分享代理
 ```objc
 // 其他方式打开，选择后APP后调用
 -(BOOL)application:(UIApplication *)application
@@ -189,4 +225,5 @@ NSString* _fileName;
     return YES;
 }
 ```
+
 
