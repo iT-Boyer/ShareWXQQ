@@ -11,13 +11,71 @@
 其他相关API引入，也要保证引入的是全路径。
 
 ### URL scheme
+
+如果无法正确检查微信／qq已安装，或无法打开微信／QQ程序   
+常见提示：尚未安装****  ／ 没有配置URL scheme   
+
+则需要完成如下配置：   
+1. 开启APP之间的URL scheme权限 
 LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法
+其中微信端三个，QQ包含若干
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<string>wtloginmqq2</string>
+<string>mqqopensdkapiV3</string>
+<string>mqqwpa</string>
+<string>mqqopensdkapiV2</string>
+<string>mqqOpensdkSSoLogin</string>
+<string>mqq</string>
+<string>mqqapi</string>
+<string>weixin</string>
+<string>wechat</string>
+</array>
+</plist>
+```
+2. 配置URL scheme
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+<key>CFBundleTypeRole</key>
+<string>Editor</string>
+<key>CFBundleURLName</key>
+<string>tencent</string>
+<key>CFBundleURLSchemes</key>
+<array>
+<string>tencent100569483</string>
+</array>
+</dict>
+<dict>
+<key>CFBundleTypeRole</key>
+<string>Editor</string>
+<key>CFBundleURLSchemes</key>
+<array>
+<string>wx8e7cab3c5d3fbe7f</string>
+</array>
+</dict>
+<dict>
+<key>CFBundleTypeRole</key>
+<string>Editor</string>
+<key>CFBundleURLName</key>
+<string>QQ</string>
+<key>CFBundleURLSchemes</key>
+<array>
+<string>QQ05FE918B</string>
+</array>
+</dict>
+</array>
+</plist>
 
-QQ包含三个：
+```
 
-![](ShareWXQQ/Schemes.png)
 
-微信端无需配置。
 
 ### 制定APP打开文件类型
 Uniform type identifiers(UTIs)提供了在整个系统里面标识数据的一个统一的方式，比如documents(文档)、pasteboard data(剪贴板数据)和bundles(包)。
