@@ -16,9 +16,9 @@
 常见提示：尚未安装****  ／ 没有配置URL scheme   
 
 则需要完成如下配置：   
-1. 开启APP之间的URL scheme权限 
-LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法
-其中微信端三个，QQ包含若干
+1. 开启APP之间的URL scheme权限     
+LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法    
+其中微信端三个，QQ包含若干  
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
