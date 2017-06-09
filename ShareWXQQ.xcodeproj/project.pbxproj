@@ -97,6 +97,7 @@
 		1472A6C61EA9E71A008FB751 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = ShareWXQQ/SDK/QQV3.2/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		1472A6C81EA9ED1F008FB751 /* QQApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QQApiRequestHandler.h; path = Control/QQApiRequestHandler.h; sourceTree = "<group>"; };
 		1472A6C91EA9ED1F008FB751 /* QQApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QQApiRequestHandler.m; path = Control/QQApiRequestHandler.m; sourceTree = "<group>"; };
+		14AFE5731EEA81D000B16521 /* QQscheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QQscheme.png; sourceTree = "<group>"; };
 		14E4E30A1EADA244006E2928 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		14E4E30B1EADA244006E2928 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		14E4E30D1EADA361006E2928 /* UIAlertView+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+WX.h"; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				84DD9E831EAAE71A0067CD03 /* README.md */,
+				14AFE5731EEA81D000B16521 /* QQscheme.png */,
 				1472A67C1EA9C038008FB751 /* ShareWXQQ */,
 				1472A6961EA9C038008FB751 /* ShareWXQQTests */,
 				84DD9E5F1EAACE200067CD03 /* ShareSDKDemo */,

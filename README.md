@@ -37,6 +37,9 @@ LSApplicationQueriesSchemes在ios9之后改变了URLScheme 的用法
 </plist>
 ```
 2. 配置URL scheme
+配置QQ scheme时需要将十进制的APPID:1232323。转为8进制，可以通过[在线进制转换器](http://tool.oschina.net/hexconvert/)转换。   
+![](QQscheme.png)
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

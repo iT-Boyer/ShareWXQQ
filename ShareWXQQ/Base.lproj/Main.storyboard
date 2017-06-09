@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,28 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Q0-61-55c">
-                                <rect key="frame" x="149" y="319" width="77" height="30"/>
+                                <rect key="frame" x="149" y="318.5" width="77" height="30"/>
                                 <state key="normal" title="分享到微信"/>
                                 <connections>
                                     <action selector="shareSDK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k1R-v1-FCc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-5a-Pvr">
-                                <rect key="frame" x="152" y="372" width="71" height="30"/>
+                                <rect key="frame" x="152" y="371.5" width="71" height="30"/>
                                 <state key="normal" title="Document"/>
                                 <connections>
                                     <action selector="shareByDocumentAPI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0v-NZ-Ch8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzf-Rt-HZq">
-                                <rect key="frame" x="153" y="250" width="69" height="30"/>
+                                <rect key="frame" x="153" y="249.5" width="69" height="30"/>
                                 <state key="normal" title="分享到QQ"/>
                                 <connections>
                                     <action selector="shareQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2q-uY-OOF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-M6-Ahj">
-                                <rect key="frame" x="151" y="424" width="73" height="30"/>
+                                <rect key="frame" x="151" y="423.5" width="73" height="30"/>
                                 <state key="normal" title="QuickLook"/>
                                 <connections>
                                     <action selector="QuickLook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUp-He-rJJ"/>
